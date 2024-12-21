@@ -9,6 +9,15 @@ body{
     max-width: 1024px;
     margin: auto;
     padding: 20px;
+    display: flex;
+    flex-direction:column;
+    gap: 30px;
+    align-items: center;
+    background-color: #FDF7F4;
+}
+
+span{
+    color: orange;
 }
 
 .seccion-productos{
@@ -23,4 +32,22 @@ body{
     gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     place-items: center;
+}
+
+
+.seccion-cart{
+    width: 100%;
+}
+.cart{
+    width: 100%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    
+}
+
+.figure-cart-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
