@@ -5,9 +5,38 @@ class Tarjetas extends HTMLElement {
       super();
       this.attachShadow({ mode: 'open' });
     }
+
+    static get observedAttributes() {
+      return ['imgSrc', 'titulo', 'precio'];
+    }
   
     async connectedCallback() {
-      this.shadowRoot.innerHTML = await this.getTemplate();
+      const shadow = this.shadowRoot;
+      shadow.innerHTML = await this.getTemplate();
+
+      this.img = shadow.querySelector('img');
+      this.titulo = shadow.querySelector('h3');
+      this.precio = shadow.querySelector('p');
+
+      this.img.src = this.getAttribute('imgSrc');
+      this.titulo.innerText = this.getAttribute('titulo');
+      this.precio.innerText = this.getAttribute('precio');
+    }
+
+    attributeChangedCallback(name, oldValue, newValue) {
+      switch (name) {
+        case 'imgSrc':
+          if (this.img) this.img.src = newValue;
+          break;
+        case 'titulo':
+          if (this.titulo) this.titulo.innerText = newValue;
+          break;
+        case 'precio':
+          if (this.precio) this.precio.innerText = newValue;
+          break;
+        default:
+          break;
+      }
     }
   
     async getTemplate() {
