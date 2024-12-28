@@ -45,13 +45,33 @@ span{
     background-color: white;
     padding: 20px;
     border-radius: 20px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width: 70%;
+    border-radius: 20px;
 }
 
 .figure-cart-image{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cart-item{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: 40px;
 }
+
+
+
 
 @media only screen and (min-width: 1024px){
     body{
