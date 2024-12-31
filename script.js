@@ -18,7 +18,7 @@ const cart = {
 
       if (this.items.length === 0) {
         cartContainer.innerHTML = `
-          <img src="/assets/images/illustration-empty-cart.svg" alt="imagen-cart-vacio">
+          <img src="./assets/images/illustration-empty-cart.svg" alt="imagen-cart-vacio">
           <p>Your added items will appear here</p>
         `;
         cartTitle.textContent = `Your cart (0)`;
