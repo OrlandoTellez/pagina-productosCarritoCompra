@@ -77,6 +77,28 @@ img{
     gap: 10px;
 }
 
+.orden-confirmar-container{
+    width: 100%;
+}
+
+.boton-confirmar{
+    width: 100%;
+    padding: 10px;
+    background-color: #7C444F;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.boton-confirmar:hover{
+    padding: 10px;
+    background-color: #8e5661;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
 
 
 
