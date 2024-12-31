@@ -15,10 +15,10 @@ const cart = {
     updateCartUI() {
       const cartContainer = document.querySelector('.cart .figure-cart-image');
       const cartTitle = document.querySelector('.cart h1 span');
-  
+
       if (this.items.length === 0) {
         cartContainer.innerHTML = `
-          <img src="/assets/images/illustration-empty-cart.svg" alt="">
+          <img src="/assets/images/illustration-empty-cart.svg" alt="imagen-cart-vacio">
           <p>Your added items will appear here</p>
         `;
         cartTitle.textContent = `Your cart (0)`;
@@ -28,9 +28,10 @@ const cart = {
             (item) => `
           <div class="cart-item">
             <img src="${item.imgSrc}" alt="${item.titulo}" />
-            <div>
+            <div class="cart-item-details">
               <h3>${item.titulo}</h3>
-              <p>${item.cantidad} x ${item.precio}</p>
+              <p>${item.cantidad} x $${item.precio}</p>
+              <p>Total: $${parseFloat(item.cantidad * item.precio)}</p>
             </div>
           </div>
         `

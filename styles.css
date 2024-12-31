@@ -67,7 +67,14 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin: 20px 0px;
+}
+
+.cart-item-details{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 
